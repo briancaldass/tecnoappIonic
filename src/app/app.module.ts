@@ -13,6 +13,7 @@ import { Acerca } from '../pages/acerca/acerca';
 
 import { Playlists } from '../pages/playlists/playlists';
 import { Canciones } from '../pages/canciones/canciones';
+import { TecnoPlayer } from '../components/tecno-player/tecno-player';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { Canciones } from '../pages/canciones/canciones';
     Contacto,
     Acerca,
     Playlists,
-    Canciones
+    Canciones,
+    TecnoPlayer
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { Canciones } from '../pages/canciones/canciones';
     Contacto,
     Acerca,
     Playlists,
-    Canciones
+    Canciones,
+    TecnoPlayer
   ],
   providers: [
     StatusBar,

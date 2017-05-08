@@ -10,7 +10,7 @@
   <button ion-button menuToggle>
   	<ion-icon name="menu"></ion-icon>
   </button>
-    <ion-title>Canciones {{playlistID}}</ion-title>
+    <ion-title>Lista {{playlist.title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -19,40 +19,18 @@
 <ion-content padding>
 	
 	<div class="user playlists">
-		<img src="/assets/images/deezer-song.jpg" alt="">
-		<h1>Nombre de playlists 1</h1>
+		<img src="{{playlist.picture}}" alt="">
+		<h1>{{playlist.title}}</h1>
 		<ion-list>
-			<ion-item>
-				<ion-thumbnail item-left>
-					<img src="/assets/images/deezer-song.jpg">
-				</ion-thumbnail>
-				<h2>Titulo de canción</h2>
-				<p>Artista - Album</p>
-			</ion-item>
-
-			<ion-item>
-				<ion-thumbnail item-left>
-					<img src="/assets/images/deezer-song.jpg">
-				</ion-thumbnail>
-				<h2>Titulo de canción 2</h2>
-				<p>Artista - Album</p>
-			</ion-item>
-
-			<ion-item>
-				<ion-thumbnail item-left>
-					<img src="/assets/images/deezer-song.jpg">
-				</ion-thumbnail>
-				<h2>Titulo de canción 3</h2>
-				<p>Artista - Album</p>
-			</ion-item>
-
-			<ion-item>
-				<ion-thumbnail item-left>
-					<img src="/assets/images/deezer-song.jpg">
-				</ion-thumbnail>
-				<h2>Titulo de canción 4</h2>
-				<p>Artista - Album</p>
-			</ion-item>
+			
+				<tecno-player *ngFor="let s of songs" 
+					[titulo]="s.title"
+					[artista]="s.artist.name"
+					[album]="s.album.title"
+					[cover]="s.album.cover"
+					[audioSrc]="s.preview"
+				></tecno-player>	
+		
 		</ion-list>
 	</div>
 

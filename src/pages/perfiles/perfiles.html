@@ -18,47 +18,11 @@
 
 <ion-content padding>
 <ion-list>
-	<ion-item (click)="goToPlaylist(1)">
+	<ion-item *ngFor="let user of users" (click)="goToPlaylist(user)" >
 		<ion-avatar item-left>
-			<img src="/assets/images/deezer-user.jpg" alt="">
+			<img src="{{user.picture}}" alt="Perfil {{user.name}}">
 		</ion-avatar>
-		<h2>Nombre Usuario 1</h2>
+		<h2>{{user.name}}</h2>
 	</ion-item>
-
-	<ion-item (click)="goToPlaylist(2)">
-		<ion-avatar item-left>
-			<img src="/assets/images/deezer-user.jpg" alt="">
-		</ion-avatar>
-		<h2>Nombre Usuario 2</h2>
-	</ion-item>
-
-	<ion-item (click)="goToPlaylist(3)">
-		<ion-avatar item-left>
-			<img src="/assets/images/deezer-user.jpg" alt="">
-		</ion-avatar>
-		<h2>Nombre Usuario 3</h2>
-	</ion-item>
-
-	<ion-item (click)="goToPlaylist(4)">
-		<ion-avatar item-left>
-			<img src="/assets/images/deezer-user.jpg" alt="">
-		</ion-avatar>
-		<h2>Nombre Usuario 4</h2>
-	</ion-item>
-
-	<ion-item>
-		<ion-avatar item-left>
-			<img src="/assets/images/deezer-user.jpg" alt="">
-		</ion-avatar>
-		<h2>Nombre Usuario 5</h2>
-	</ion-item>
-
-	<ion-item>
-		<ion-avatar item-left>
-			<img src="/assets/images/deezer-user.jpg" alt="">
-		</ion-avatar>
-		<h2>Nombre Usuario 6</h2>
-	</ion-item>
-
 </ion-list>
 </ion-content>
