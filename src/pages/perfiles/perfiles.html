@@ -17,12 +17,14 @@
 
 
 <ion-content padding>
-<ion-list>
-	<ion-item *ngFor="let user of users" (click)="goToPlaylist(user)" >
-		<ion-avatar item-left>
-			<img src="{{user.picture}}" alt="Perfil {{user.name}}">
-		</ion-avatar>
-		<h2>{{user.name}}</h2>
-	</ion-item>
-</ion-list>
+	<ion-grid fixed>
+		<ion-list ion-row>
+			<ion-item class="perfil_item"ion-col col-12 col-sm-6 col-md-4 *ngFor="let user of users" (click)="goToPlaylist(user)" >
+				<ion-avatar item-left>
+					<img src="{{user.picture}}" alt="Perfil {{user.name}}">
+				</ion-avatar>
+				<h2>{{user.name}}</h2>
+			</ion-item>
+		</ion-list>
+	</ion-grid>
 </ion-content>

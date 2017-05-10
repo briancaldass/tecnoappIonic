@@ -10,6 +10,8 @@ import { Inicio } from '../pages/inicio/inicio';
 import { Perfiles } from '../pages/perfiles/perfiles';
 import { Contacto } from '../pages/contacto/contacto';
 import { Acerca } from '../pages/acerca/acerca';
+import { PerfilDetalle } from '../pages/perfil-detalle/perfil-detalle';
+import { CancionPopover } from '../pages/cancion-popover/cancion-popover';
 
 import { Playlists } from '../pages/playlists/playlists';
 import { Canciones } from '../pages/canciones/canciones';
@@ -25,7 +27,9 @@ import { TecnoPlayer } from '../components/tecno-player/tecno-player';
     Acerca,
     Playlists,
     Canciones,
-    TecnoPlayer
+    TecnoPlayer,
+    PerfilDetalle,
+    CancionPopover
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,9 @@ import { TecnoPlayer } from '../components/tecno-player/tecno-player';
     Acerca,
     Playlists,
     Canciones,
-    TecnoPlayer
+    TecnoPlayer,
+    PerfilDetalle,
+    CancionPopover
   ],
   providers: [
     StatusBar,

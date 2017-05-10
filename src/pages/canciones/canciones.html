@@ -11,6 +11,11 @@
   	<ion-icon name="menu"></ion-icon>
   </button>
     <ion-title>Lista {{playlist.title}}</ion-title>
+    <ion-buttons end>
+	    <button  ion-button icon-only  (click)="openCancionPopover($event)">
+	    	<ion-icon name="more"></ion-icon>
+	    </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -21,17 +26,19 @@
 	<div class="user playlists">
 		<img src="{{playlist.picture}}" alt="">
 		<h1>{{playlist.title}}</h1>
-		<ion-list>
+		<ion-grid>
+			<ion-list ion-row>
+				
+					<tecno-player ion-col col-12 col-sm-6 col-md-4 *ngFor="let s of songs" 
+						[titulo]="s.title"
+						[artista]="s.artist.name"
+						[album]="s.album.title"
+						[cover]="s.album.cover"
+						[audioSrc]="s.preview"
+					></tecno-player>	
 			
-				<tecno-player *ngFor="let s of songs" 
-					[titulo]="s.title"
-					[artista]="s.artist.name"
-					[album]="s.album.title"
-					[cover]="s.album.cover"
-					[audioSrc]="s.preview"
-				></tecno-player>	
-		
-		</ion-list>
+			</ion-list>
+		</ion-grid>
 	</div>
 
 </ion-content>

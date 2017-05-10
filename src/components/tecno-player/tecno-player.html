@@ -10,5 +10,5 @@
 		<ion-icon *ngIf="!playing" name="play"></ion-icon>	
 		<ion-icon *ngIf="playing" name="pause"></ion-icon>	
 	</button>
-	<progress value="50" max="100"></progress>
+	<progress value="{{audioPos}}" max="{{audioDuration}}"></progress>
 </ion-item>
